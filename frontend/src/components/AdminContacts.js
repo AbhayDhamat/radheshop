@@ -68,18 +68,19 @@ const AdminContacts = () => {
             <th>Submitted At</th>
           </tr>
         </thead>
-        <tbody>
-          {contacts.map((contact) => (
-            <tr key={contact._id}>
-              <td>{contact.name}</td>
-              <td>{contact.email}</td>
-              <td>{contact.phone}</td>
-              <td>{contact.message}</td>
-              <td>{contact.rating}</td>
-              <td>{new Date(contact.createdAt).toLocaleString()}</td>
-            </tr>
-          ))}
-        </tbody>
+       <tbody>
+  {contacts.map((contact) => (
+    <tr key={contact._id}>
+      <td data-label="Name">{contact.name}</td>
+      <td data-label="Email">{contact.email}</td>
+      <td data-label="Phone">{contact.phone}</td>
+      <td data-label="Message">{contact.message}</td>
+      <td data-label="Rating">{contact.rating}</td>
+      <td data-label="Submitted At">{new Date(contact.createdAt).toLocaleString()}</td>
+    </tr>
+  ))}
+</tbody>
+
       </table>
     </div>
   );

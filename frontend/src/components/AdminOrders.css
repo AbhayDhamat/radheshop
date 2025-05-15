@@ -11,6 +11,7 @@
   justify-content: center;
   gap: 10px;
   margin-bottom: 15px;
+  flex-wrap: wrap;
 }
 
 .filters input {
@@ -79,4 +80,55 @@ th {
 .pagination button:disabled {
   background-color: gray;
   cursor: not-allowed;
+}
+
+/* ------------------- */
+/* ✅ Responsive Design */
+/* ------------------- */
+
+/* Tablets (768px and down) */
+@media screen and (max-width: 768px) {
+  table {
+    width: 95%;
+    font-size: 14px;
+  }
+
+  .filters input {
+    width: 150px;
+    margin-bottom: 10px;
+  }
+
+  th, td {
+    padding: 8px;
+  }
+}
+
+/* Mobile Devices (480px and down) */
+@media screen and (max-width: 480px) {
+  .filters {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .filters input {
+    width: 90%;
+  }
+
+  table {
+    width: 100%;
+    font-size: 12px;
+  }
+
+  th, td {
+    padding: 6px;
+  }
+
+  .pagination {
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  .pagination span {
+    font-size: 14px;
+  }
 }

@@ -192,6 +192,53 @@
   .modal-content {
     width: 90%;
   }
+  /* Responsive Design for Small Screens */
+@media (max-width: 600px) {
+  .order-page, .bill-page, .address-form {
+    padding: 15px;
+    margin: 10px;
+    box-shadow: none;
+    border-radius: 8px;
+  }
+
+  .order-page h1,
+  .bill-page h1,
+  .address-form h2 {
+    font-size: 1.8rem;
+  }
+
+  .bill-container, .bill-details, .bill-summary {
+    font-size: 0.9rem;
+    overflow-x: auto;
+  }
+
+  .bill-container th,
+  .bill-container td {
+    font-size: 0.85rem;
+    padding: 10px;
+  }
+
+  .download-btn, .back-btn, .save-address-btn {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    font-size: 1rem;
+  }
+
+  .modal-content {
+    width: 90%;
+    padding: 20px;
+  }
+
+  .bill-user-info p {
+    font-size: 0.95rem;
+  }
+
+  .bill-footer h3 {
+    font-size: 1.2rem;
+  }
+}
+
 }
 
 }
