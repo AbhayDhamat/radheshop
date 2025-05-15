@@ -158,7 +158,7 @@ const AdminOrders = () => {
     if (!window.confirm("Are you sure you want to delete this order?")) return;
     try {
       const token = localStorage.getItem("token");
-      const response = await fetch(`http://localhost:5000/admin/orders/${orderId}`, {
+      const response = await fetch(`https://radheshop-backend.onrender.com/admin/orders/${orderId}`, {
         method: "DELETE",
         headers: { Authorization: `Bearer ${token}` },
       });
