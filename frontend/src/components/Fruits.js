@@ -25,7 +25,7 @@ const Fruits = () => {
 
     const fetchFruits = async () => {
       try {
-        const response = await fetch("http://localhost:5000/api/fruits", {
+        const response = await fetch("https://radheshop-backend.onrender.com/api/fruits", {
           headers: { Authorization: `Bearer ${token}` },
         });
 
@@ -112,7 +112,7 @@ const Fruits = () => {
     console.log("🟢 Sending Fruit Order:", JSON.stringify(orderData, null, 2));
 
     try {
-      const response = await fetch("http://localhost:5000/orders/fruits", {
+      const response = await fetch("https://radheshop-backend.onrender.com/orders/fruits", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

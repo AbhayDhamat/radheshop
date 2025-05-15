@@ -39,7 +39,7 @@
 
 //   const fetchUserProfile = async (token) => {
 //     try {
-//       const response = await fetch("http://localhost:5000/user/profile", {
+//       const response = await fetch("https://radheshop-backend.onrender.com/user/profile", {
 //         headers: { Authorization: `Bearer ${token}` },
 //       });
 
@@ -56,7 +56,7 @@
 
 //   const fetchOrders = async (token) => {
 //     try {
-//       const response = await fetch("http://localhost:5000/orders", {
+//       const response = await fetch("https://radheshop-backend.onrender.com/orders", {
 //         headers: { Authorization: `Bearer ${token}` },
 //       });
 
@@ -85,7 +85,7 @@
 //     const token = localStorage.getItem("token");
 
 //     try {
-//       const response = await fetch(`http://localhost:5000/orders/${orderId}`, {
+//       const response = await fetch(`https://radheshop-backend.onrender.com/orders/${orderId}`, {
 //         method: "DELETE",
 //         headers: {
 //           "Content-Type": "application/json",
@@ -344,7 +344,7 @@ const Order = () => {
 
   const fetchUserProfile = async (token) => {
     try {
-      const response = await fetch("http://localhost:5000/user/profile", {
+      const response = await fetch("https://radheshop-backend.onrender.com/user/profile", {
         headers: { Authorization: `Bearer ${token}` },
       });
       const data = await response.json();
@@ -360,7 +360,7 @@ const Order = () => {
     const token = localStorage.getItem("token");
   
     try {
-      const response = await fetch(`http://localhost:5000/orders/${orderId}`, {
+      const response = await fetch(`https://radheshop-backend.onrender.com/orders/${orderId}`, {
         method: "DELETE",
         headers: {
           "Content-Type": "application/json",
@@ -386,7 +386,7 @@ const Order = () => {
 
   const fetchOrders = async (token) => {
     try {
-      const response = await fetch("http://localhost:5000/orders", {
+      const response = await fetch("https://radheshop-backend.onrender.com/orders", {
         headers: { Authorization: `Bearer ${token}` },
       });
       const data = await response.json();

@@ -116,6 +116,7 @@ const AdminOrders = () => {
   const recordsPerPage = 5;
   const navigate = useNavigate();
 
+
   useEffect(() => {
     const token = localStorage.getItem("token");
     if (!token) {
@@ -138,7 +139,7 @@ const AdminOrders = () => {
 
   const fetchOrders = async (token) => {
     try {
-      const response = await fetch("http://localhost:5000/admin/orders", {
+      const response = await fetch("https://radheshop-backend.onrender.com/admin/orders", {
         headers: { Authorization: `Bearer ${token}` },
       });
 
