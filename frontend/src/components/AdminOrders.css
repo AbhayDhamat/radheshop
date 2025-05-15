@@ -1,0 +1,82 @@
+/* General page styling */
+.admin-orders {
+  padding: 20px;
+  font-family: Arial, sans-serif;
+  text-align: center;
+}
+
+/* Filters */
+.filters {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.filters input {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 200px;
+}
+
+/* Orders Table */
+table {
+  width: 80%;
+  margin: auto;
+  border-collapse: collapse;
+  background: white;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+}
+
+th, td {
+  border: 1px solid #ddd;
+  padding: 10px;
+  text-align: center;
+}
+
+th {
+  background-color: black;
+  color: white;
+}
+
+/* Delete Button */
+.delete-btn {
+  background-color: red;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  cursor: pointer;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.delete-btn:hover {
+  background-color: darkred;
+}
+
+/* Pagination */
+.pagination {
+  margin-top: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.pagination button {
+  padding: 6px 12px;
+  background-color: black;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.pagination button:disabled {
+  background-color: gray;
+  cursor: not-allowed;
+}
