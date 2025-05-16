@@ -131,4 +131,39 @@ th {
   .pagination span {
     font-size: 14px;
   }
+  /* Scrollable wrapper for table */
+.table-responsive {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  margin-top: 10px;
+}
+
+/* Optional: Custom scrollbar styling */
+.table-responsive::-webkit-scrollbar {
+  height: 8px;
+}
+
+.table-responsive::-webkit-scrollbar-thumb {
+  background-color: #888;
+  border-radius: 4px;
+}
+
+.table-responsive::-webkit-scrollbar-thumb:hover {
+  background-color: #555;
+}
+@media screen and (max-width: 480px) {
+  .admin-orders {
+    padding: 10px;
+  }
+
+  table {
+    font-size: 12px;
+    min-width: 600px; /* Ensures horizontal scroll kicks in */
+  }
+
+  .table-responsive {
+    width: 100%;
+  }
+}
+
 }

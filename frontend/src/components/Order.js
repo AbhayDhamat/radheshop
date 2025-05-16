@@ -581,30 +581,32 @@ const Order = () => {
         </div>
         <br />
 
-        <table className="bill-container">
-          <thead>
-            <tr>
-              <th>Order ID</th>
-              <th>Product Name</th>
-              <th>Type</th>
-              <th>Price</th>
-              <th>Quantity</th>
-              <th>Total</th>
-            </tr>
-          </thead>
-          <tbody>
-            {selectedOrder.items.map((item, index) => (
-              <tr key={`${selectedOrder._id}-${index}`}>
-                <td>{selectedOrder._id}</td>
-                <td>{item.productId?.name || "Unknown Product"}</td>
-                <td>{item.productType}</td>
-                <td>₹{item.price || "N/A"}</td>
-                <td>{item.quantity}</td>
-                <td>₹{item.quantity * item.price}</td>
-              </tr>
-            ))}
-          </tbody>
-        </table>
+        <div className="table-responsive">
+  <table className="bill-container">
+    <thead>
+      <tr>
+        <th>Order ID</th>
+        <th>Product Name</th>
+        <th>Type</th>
+        <th>Price</th>
+        <th>Quantity</th>
+        <th>Total</th>
+      </tr>
+    </thead>
+    <tbody>
+      {selectedOrder.items.map((item, index) => (
+        <tr key={`${selectedOrder._id}-${index}`}>
+          <td>{selectedOrder._id}</td>
+          <td>{item.productId?.name || "Unknown Product"}</td>
+          <td>{item.productType}</td>
+          <td>₹{item.price || "N/A"}</td>
+          <td>{item.quantity}</td>
+          <td>₹{item.quantity * item.price}</td>
+        </tr>
+      ))}
+    </tbody>
+  </table>
+</div>
 
         <div className="bill-footer">
           <h3>Total Amount: ₹{totalAmount}</h3>

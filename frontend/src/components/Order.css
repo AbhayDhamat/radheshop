@@ -237,6 +237,22 @@
   .bill-footer h3 {
     font-size: 1.2rem;
   }
+  /* Responsive Scrollable Table */
+.table-responsive {
+  width: 100%;
+  overflow-x: auto;
+}
+
+@media (max-width: 600px) {
+  .table-responsive {
+    -webkit-overflow-scrolling: touch;
+  }
+
+  table {
+    min-width: 600px; /* ensures content doesn't shrink too much */
+  }
+}
+
 }
 
 }
