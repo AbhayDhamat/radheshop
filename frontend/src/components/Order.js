@@ -581,7 +581,7 @@ const Order = () => {
         </div>
         <br />
 
-        <div className="table-responsive">
+      
   <table className="bill-container">
     <thead>
       <tr>
@@ -593,6 +593,7 @@ const Order = () => {
         <th>Total</th>
       </tr>
     </thead>
+      <div className="table-responsive">
     <tbody>
       {selectedOrder.items.map((item, index) => (
         <tr key={`${selectedOrder._id}-${index}`}>
@@ -605,8 +606,9 @@ const Order = () => {
         </tr>
       ))}
     </tbody>
+    </div>
   </table>
-</div>
+
 
         <div className="bill-footer">
           <h3>Total Amount: ₹{totalAmount}</h3>
