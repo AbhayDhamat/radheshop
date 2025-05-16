@@ -138,6 +138,8 @@
   .bill-container th, .bill-container td {
     font-size: 0.9rem;
     padding: 10px;
+    color:#2e7d32;
+    
   }
   /* Modal Styling */
 .modal {
