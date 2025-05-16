@@ -55,34 +55,36 @@ const AdminContacts = () => {
   if (contacts.length === 0) return <p>No contacts found.</p>;
 
   return (
-    <div className="contacts-page">
-      <h1>Users: All Contacts</h1>
-      <table className="contacts-table">
-        <thead>
-          <tr>
-            <th>Name</th>
-            <th>Email</th>
-            <th>Phone</th>
-            <th>Message</th>
-            <th>Rating</th>
-            <th>Submitted At</th>
+   <div className="contacts-page">
+  <h1>Users: All Contacts</h1>
+  <div className="table-responsive">
+    <table className="contacts-table">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Email</th>
+          <th>Phone</th>
+          <th>Message</th>
+          <th>Rating</th>
+          <th>Submitted At</th>
+        </tr>
+      </thead>
+      <tbody>
+        {contacts.map((contact) => (
+          <tr key={contact._id}>
+            <td data-label="Name">{contact.name}</td>
+            <td data-label="Email">{contact.email}</td>
+            <td data-label="Phone">{contact.phone}</td>
+            <td data-label="Message">{contact.message}</td>
+            <td data-label="Rating">{contact.rating}</td>
+            <td data-label="Submitted At">{new Date(contact.createdAt).toLocaleString()}</td>
           </tr>
-        </thead>
-       <tbody>
-  {contacts.map((contact) => (
-    <tr key={contact._id}>
-      <td data-label="Name">{contact.name}</td>
-      <td data-label="Email">{contact.email}</td>
-      <td data-label="Phone">{contact.phone}</td>
-      <td data-label="Message">{contact.message}</td>
-      <td data-label="Rating">{contact.rating}</td>
-      <td data-label="Submitted At">{new Date(contact.createdAt).toLocaleString()}</td>
-    </tr>
-  ))}
-</tbody>
+        ))}
+      </tbody>
+    </table>
+  </div>
+</div>
 
-      </table>
-    </div>
   );
 };
 

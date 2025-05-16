@@ -100,36 +100,36 @@ const AdminOrders = () => {
       </div>
 
       {/* Orders Table */}
-    {/* Orders Table */}
-<div className="table-responsive">
-  <table>
-    <thead>
-      <tr>
-        <th>Order ID</th>
-        <th>User</th>
-        <th>Date</th>
-        <th>Type</th>
-        <th>Products</th>
-        <th>Actions</th>
-      </tr>
-    </thead>
-    <tbody>
-      {currentRecords.map((order) => (
-        <tr key={order._id}>
-          <td>{order._id}</td>
-          <td>{order.userId?.name || "Unknown"}</td>
-          <td>{new Date(order.createdAt).toLocaleString()}</td>
-          <td>{(order.items[0]?.productType).toLocaleString()}</td>
-          <td>{order.items.map((item) => item.productId?.name).join(", ")}</td>
-          <td>
-            <button className="delete-btn" onClick={() => deleteOrder(order._id)}>🗑 Delete</button>
-          </td>
-        </tr>
-      ))}
-    </tbody>
-  </table>
-</div>
-
+      <table>
+        <thead>
+          <tr>
+            <th>Order ID</th>
+            <th>User</th>
+            <th>Date</th>
+            <th>Type</th>
+            <th>Products</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <div className="table-responsive">
+        <tbody>
+          
+          {currentRecords.map((order) => (
+            <tr key={order._id}>
+              <td>{order._id}</td>
+              <td>{order.userId?.name || "Unknown"}</td>
+             
+              <td>{new Date(order.createdAt).toLocaleString()}</td>
+              <td>{(order.items[0]?.productType).toLocaleString()}</td>
+              <td>{order.items.map((item) => item.productId?.name).join(", ")}</td>
+              <td>
+                <button className="delete-btn" onClick={() => deleteOrder(order._id)}>🗑 Delete</button>
+              </td>
+            </tr>
+          ))}
+        </tbody>
+        </div>
+      </table>
 
       {/* Pagination Controls */}
       <div className="pagination">
